@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[View]
+(
+	[Id] INT NOT NULL PRIMARY KEY,
+	[IsVirtual] BIT NOT NULL DEFAULT 0, 
+	[ViewName] NVARCHAR(100) NOT NULL,
+	[ViewPath] NVARCHAR(500) NULL,
+	[ViewContent] NVARCHAR(MAX) NULL
+)
+
+GO

@@ -1,0 +1,10 @@
+﻿@using DynamicViewEngine.Data;
+@model List<Motorcycle>
+<div class="row">
+	<ul>
+		@foreach (var motorcycle in Model)
+		{
+			<li>@string.Format($"{motorcycle.Model} Class {motorcycle.Name}")</li>
+		}
+	</ul>
+</div>

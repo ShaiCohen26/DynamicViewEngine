@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Motorcycle]
+(
+	[Id] INT NOT NULL PRIMARY KEY,
+	[Name]	VARCHAR(100) NOT NULL,
+	[Model]	VARCHAR(100) NOT NULL
+
+)

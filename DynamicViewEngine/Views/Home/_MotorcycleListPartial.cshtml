@@ -1,0 +1,11 @@
+﻿@using DynamicViewEngine.Data;
+@model List<Motorcycle>
+<div class="row">
+	@foreach (var motorcycle in Model)
+	{
+		<div class="col-md-4">
+			<h2>@string.Format($"{motorcycle.Model} Class {motorcycle.Name}")</h2>
+			<p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+		</div>
+	}
+</div>

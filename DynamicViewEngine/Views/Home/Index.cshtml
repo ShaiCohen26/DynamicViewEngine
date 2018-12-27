@@ -1,0 +1,25 @@
+﻿@using DynamicViewEngine.Data;
+@model List<Motorcycle>
+@{
+	ViewBag.Title = "Home Page";
+}
+<script type="text/javascript">
+	$(document.readyState)
+</script>
+<div class="jumbotron">
+	<h1>Dynamic Views</h1>
+	<p class="lead">Select the location of the *.cshtml view:</p>
+	@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+	{
+		<p>
+
+			<select name="ddlViewLocation" id="ddlViewLocation" onchange="this.form.submit();">
+				<option value="DefaultViewOnFileSystem">Default View On File System</option>
+				<option value="CustomViewOnFileSystem">Custom View On File System</option>
+				<option value="DynamicViewFromDb">Dynamic View From Db</option>
+			</select>
+		</p>
+	}
+
+</div>
+@Html.Partial(ViewData["MotorcycleListView"].ToString(), Model);
